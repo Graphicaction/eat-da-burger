@@ -1,0 +1,13 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    background-color: rgb(196, 85, 85);
+}
+#burgerList {
+    background-color: rgb(245, 211, 167);
+    color:rgb(105, 45, 45);
+}
+.list{
+    margin: 0 auto;
+}
