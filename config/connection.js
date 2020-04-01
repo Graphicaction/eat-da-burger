@@ -1,12 +1,16 @@
 const mysql = require("mysql");
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "",
-  database: "burgers_db"
-});
+if(process.env.NODE_ENV === "production"){
+  var connection = mysql.createConnection(process.env.JAWSDB);
+} else {
+  var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "",
+    database: "burgers_db"
+  });
+}   
 
 connection.connect(err => {
   if (err) {

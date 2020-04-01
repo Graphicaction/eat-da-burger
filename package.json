@@ -1,0 +1,27 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "Echo err",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graphicaction/eat-da-burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Graphicaction/eat-da-burger/issues"
+  },
+  "homepage": "https://github.com/Graphicaction/eat-da-burger#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "mysql": "^2.18.1"
+  }
+}
