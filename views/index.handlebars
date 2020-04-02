@@ -1,0 +1,45 @@
+
+<div class="container mt-4">
+    <main>
+        
+        <div class="my-4">
+            <h1>Welcome to Eat-Da-Burger</h1>
+            <form id="addBurger" class="form-inline mt-5">
+                <div class="form-group mx-3 mb-3">
+                    <label for="burger_name" class="sr-only">Burger name</label>
+                    <textarea type="text" cols="40" id="burger_name"></textarea>
+                </div>               
+                <button type="submit" class="btn btn-lg mb-3" id="addBurger"><i class="fa fa-check" aria-hidden="true"></i></button>
+            </form>
+            <p class="mx-3 mb-3">Enter burger name and press checkout button</p>
+        </div>
+        <div class="burgerDiv mt-5">
+            <div class="row">
+                <div class="list col-sm-5 col-md-5 col-lg-5">
+                    <h3 class="mb-4"><u>Waiting to get devoured!</u></h3>
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            <form class="form-row align-items-center">
+                                <div class="col-sm-8 my-2 px-5 py-2 border" id="burgerList">
+                                    {{this.burger_name}}
+                                </div>
+                                <button data-id="{{id}}" class="ml-3 devourBtn">Devour it!</button>
+                            </form>
+                        {{/unless}}
+                    {{/each}}
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5" id="devoured">
+                    <h3 class="mb-4"><u>Already Devoured!</u></h3>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            <div class="col-sm-8 my-3 px-5 py-2 border" id="burgerList" aria-disabled="true">
+                                {{this.burger_name}}
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
