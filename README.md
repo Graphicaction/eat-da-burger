@@ -17,7 +17,7 @@
 
 ```bash
     npm init
-    npm i mysql 
+    npm i mysql dotenv
     npm i express express-handlebars
 ```
 ## <a name="deployed"></a>Deployed Link:
