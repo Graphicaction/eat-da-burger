@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
-if(process.env.NODE_ENV === "production"){
-  var connection = mysql.createConnection(process.env.JAWSDB);
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   var connection = mysql.createConnection({
     host: "localhost",
